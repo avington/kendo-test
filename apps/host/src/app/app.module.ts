@@ -12,7 +12,16 @@ import { NxWelcomeComponent } from './nx-welcome.component';
     CommonModule,
     BrowserAnimationsModule,
     DropDownsModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(
+      [
+        {
+          path: 'test',
+          loadChildren: () =>
+            import('test/Module').then((m) => m.RemoteEntryModule),
+        },
+      ],
+      { initialNavigation: 'enabledBlocking' }
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent],

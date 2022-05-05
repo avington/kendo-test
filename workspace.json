@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "host": "apps/host",
-    "host-e2e": "apps/host-e2e"
+    "host-e2e": "apps/host-e2e",
+    "test": "apps/test",
+    "test-e2e": "apps/test-e2e"
   }
 }
